@@ -1,0 +1,47 @@
+{
+  "name": "node-testing-framework",
+  "version": "0.0.1",
+  "description": "Setup a fast, performant TDD framework in a Node.js, Express and Mongo application using Mocha and friends.",
+  "main": "server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "lint": "./node_modules/eslint/bin/eslint.js .",
+    "lint:fix": "./node_modules/eslint/bin/eslint.js --fix .",
+    "test": "export NODE_ENV=test; ./node_modules/mocha/bin/mocha --exit -t 40000 tests/*.js;ex=$?;unset NODE_ENV; exit $ex;",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikniv/node-testing-framework.git"
+  },
+  "keywords": [
+    "node",
+    "node.js",
+    "testing",
+    "tdd",
+    "mocha",
+    "chai",
+    "sinon",
+    "mongodb-memory-server"
+  ],
+  "author": "nikniv",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/nikniv/node-testing-framework/issues"
+  },
+  "homepage": "https://github.com/nikniv/node-testing-framework#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.2",
+    "mongodb-memory-server": "^6.0.1",
+    "sinon": "^7.5.0",
+  }
+}
